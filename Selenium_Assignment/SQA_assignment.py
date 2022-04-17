@@ -8,8 +8,7 @@ import time
 
 
 
-
-#driver = webdriver.Chrome(ChromeDriverManager().install())
+#driver = webdriver.Chrome(ChromeDriverManager().install()) #automatically install the current webdriver version, thus we wont need to install again and again.
 
 
 
@@ -26,14 +25,14 @@ print(driver.title)
 
 driver.find_element(By.CLASS_NAME, 'login').click()  #clicking the sign in button
 #signIn = driver.find_elements(By.CSS_SELECTOR, 'div.header_user_info a')
-#signIn[0].click()                                                        --> line27,28 is another way but complicated way to click on the sign in                                                                                                                          button
+#signIn[0].click()                                                        --> line27,28 is another way to click on the sign in button
 
 #-----------------------------------------------------------------------------------------------------------------------
 # #creating the first account
-driver.find_element(By.ID,'email_create').send_keys("nafis.3@hotmail.com") ##line 32--> filling up the email address space of create account                                                                                              section by using its unique id from the inspect
+driver.find_element(By.ID,'email_create').send_keys("nafis.3@hotmail.com") ##line 32--> filling up the email address space of create account section by using its unique id from the inspect
 
-#create = driver.find_elements(By.CSS_SELECTOR, 'div.submit button i') ##clicking on the create account button by using Css                                                                     selector, meaning where it is actually situated in term of div,ul,li,span etc
-#create[0].click()                                                      --->line 34,35 is another way but complicated way of clicking the create                                                                                                       account button
+
+
 driver.find_element(By.ID, 'SubmitCreate').click()  # Easy way to clicking on create account button
 
 
@@ -64,8 +63,8 @@ driver.find_element(By.ID, 'phone').send_keys("0194830")
 driver.find_element(By.ID, 'phone_mobile').send_keys("01746086")
 
 driver.find_element(By.ID, 'submitAccount').click()  #easy way to click register button
-#register = driver.find_elements(By.CSS_SELECTOR, 'button span i')
-#register[0].click()                                              #line66,67-->another way but a complicated way of clicking register button
+
+
 
 driver.find_element(By.CLASS_NAME, 'logout').click() #clicking log out using the class name from its inspect
 #time.sleep(5)
@@ -125,8 +124,8 @@ driver.find_element(By.XPATH, '//*[@id="categories_block_left"]/div/ul/li[1]/a')
 driver.find_element(By.XPATH, '/html/body/div/div[2]/div/div[3]/div[2]/ul/li/div/div[2]/div[2]/a[1]').click() #clicking on the Add Cart button using its Xpath which can be found from its inpect by clicking right button of the mouse
 
 driver.find_element(By.XPATH, '//*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span/i').click() #clicking the option 'continue shopping by using its xpath
-# cont = driver.find_elements(By.CSS_SELECTOR, 'div.button-container span i')
-# cont[0].click()                                            #--> another complicated way of clicking the option 'continue shopping'
+
+
 
 driver.find_element(By.XPATH, '/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[3]/a').click()  #clicking on T-Shirt button by usiing its xpath from its inspect
 
