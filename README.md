@@ -1,5 +1,5 @@
 # SQA-AUTOMATION
-Tasks Done in the Sample Work:
+## Tasks Done in the Sample Work:
 1. Creating 2 new accounts
 2. Login with any of the new accounts
 3. Going to Casual Dresses section >> adding a dress into cart >> continuing shopping
